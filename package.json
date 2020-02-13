@@ -1,0 +1,26 @@
+{
+  "name": "developer-profile-generator",
+  "version": "1.0.0",
+  "description": "An application that creates a developer profile based on input by the user.",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "electron-html-to": "^2.6.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofagbure/Developer-Profile-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ofagbure/Developer-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/ofagbure/Developer-Profile-Generator#readme"
+}
