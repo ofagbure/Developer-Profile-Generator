@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const axios = require("axios")
 const fs = require("fs");
 const path = require("path");
-const convertFactory = require("electron-html-to");
+const HTML5ToPDF = require("html5-to-pdf");
 const generateHTML = require("./generateHTML");
 const questions = [
     {
@@ -59,13 +59,25 @@ function init() {
                     if (err) throw err;
 
                     console.log("created our test html file!");
+                    run();
                 });
 
-                // console.log(generateHTML(github));
-                // console.log(generateHTML.generateHTML(github))
-                // writeToFile(generateHTML, res.data)
+                
             })
     })
 };
 
 init();
+
+const run = async () => {
+    const html5ToPDF = new HTML5ToPDF({
+      inputPath: path.join(__dirname, "index.html"),
+      outputPath: path.join(__dirname, "output.pdf"),
+    })
+   
+    await html5ToPDF.start()
+    await html5ToPDF.build()
+    await html5ToPDF.close()
+    console.log("DONE")
+    process.exit(0)
+  }
