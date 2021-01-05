@@ -4,7 +4,7 @@
   "description": "An application that creates a developer profile based on input by the user.",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "electron-html-to": "^2.6.0",
     "fs": "0.0.1-security",
     "html5-to-pdf": "^3.2.0",
